@@ -1,0 +1,132 @@
+== HARD (must pass) ==
+[H1 shader]
+  final.glsl == bundle(work.glsl)   ok
+  library functions called: 50   ok
+  library functions redefined: none   ok
+  no #version / iChannel / uniform   ok
+  glsl_tools check final.glsl   ok
+[H2 deliverables]
+  t2.png       ok
+  t6.png       ok
+  t12.png      ok
+  render.mp4   24 fps ok; pts 0.000..14.125 s (need 0..14.125) ok
+[H3 hard cut]
+  reference first frame after cut 3.625 s (frame diff 0.204)
+  own       first frame after cut 3.625 s (frame diff 0.188)   ok
+
+== INDICATORS (reported, not a verdict) ==
+[A t=2]
+  Q1 water    dE   4.6  ok
+  Q1 wood     dE   7.2  ok
+  Q1 sand     dE   6.4  ok
+  Q1 grass    dE   8.6  ok
+  Q2 water    0.17 -> 0.22  (+0.05) ok
+  Q2 rock     0.10 -> 0.03  (-0.07) ok
+  Q2 wood     0.17 -> 0.20  (+0.03) ok
+  Q2 foliage  0.25 -> 0.29  (+0.05) ok
+  Q2 sand     0.28 -> 0.21  (-0.07) ok
+  Q2 dark     0.03 -> 0.04  (+0.01) ok
+  Q3 luma mean diff 0.040 ok
+  Q4 luma std  diff 0.017 ok
+  Q5 detail ratio   0.981 ok
+  layout agreement 32x18  0.61
+  still vs render.mp4 frame at 2 s: mean abs diff 0.007
+[B-wide t=6]
+  Q1 water    dE   7.5  ok
+  Q1 rock     dE   2.9  ok
+  Q1 foliage  dE   6.9  ok
+  Q2 water    0.14 -> 0.16  (+0.02) ok
+  Q2 rock     0.25 -> 0.29  (+0.04) ok
+  Q2 wood     0.01 -> 0.01  (+0.00) ok
+  Q2 foliage  0.41 -> 0.41  (-0.00) ok
+  Q2 sand     0.04 -> 0.03  (-0.02) ok
+  Q2 dark     0.14 -> 0.10  (-0.04) ok
+  Q3 luma mean diff 0.008 ok
+  Q4 luma std  diff 0.023 ok
+  Q5 detail ratio   1.045 ok
+  layout agreement 32x18  0.62
+  still vs render.mp4 frame at 6 s: mean abs diff 0.007
+[B-close t=12]
+  Q1 water    dE   4.5  ok
+  Q1 rock     dE   2.9  ok
+  Q1 wood     dE   5.9  ok
+  Q2 water    0.26 -> 0.29  (+0.03) ok
+  Q2 rock     0.43 -> 0.47  (+0.04) ok
+  Q2 wood     0.04 -> 0.06  (+0.01) ok
+  Q2 foliage  0.05 -> 0.02  (-0.03) ok
+  Q2 sand     0.06 -> 0.03  (-0.03) ok
+  Q2 dark     0.15 -> 0.14  (-0.02) ok
+  Q3 luma mean diff 0.031 ok
+  Q4 luma std  diff 0.004 ok
+  Q5 detail ratio   1.109 ok
+  layout agreement 32x18  0.66
+  still vs render.mp4 frame at 12 s: mean abs diff 0.007
+[timeline] 57 samples, every 0.25 s
+     t   water ref/own    luma ref/own   layout
+   0.00   0.34 / 0.35     0.568 / 0.513    0.67    
+   0.25   0.32 / 0.33     0.567 / 0.512    0.65    
+   0.50   0.30 / 0.31     0.567 / 0.512    0.64    
+   0.75   0.29 / 0.29     0.567 / 0.512    0.66    
+   1.00   0.26 / 0.28     0.565 / 0.511    0.66    
+   1.25   0.24 / 0.26     0.564 / 0.512    0.60    
+   1.50   0.21 / 0.24     0.561 / 0.512    0.61    
+   1.75   0.20 / 0.22     0.559 / 0.512    0.64    
+   2.00   0.18 / 0.20     0.556 / 0.511    0.60    
+   2.25   0.16 / 0.19     0.552 / 0.510    0.61    
+   2.50   0.15 / 0.17     0.549 / 0.509    0.61    
+   2.75   0.14 / 0.16     0.548 / 0.510    0.59    
+   3.00   0.12 / 0.14     0.549 / 0.511    0.59    
+   3.25   0.12 / 0.12     0.550 / 0.512    0.57    
+   3.50   0.11 / 0.11     0.550 / 0.514    0.59    
+   3.75   0.09 / 0.06     0.421 / 0.438    0.64    
+   4.00   0.10 / 0.07     0.416 / 0.436    0.63    
+   4.25   0.10 / 0.08     0.416 / 0.441    0.61    
+   4.50   0.10 / 0.08     0.419 / 0.444    0.62    
+   4.75   0.11 / 0.09     0.424 / 0.447    0.65    
+   5.00   0.11 / 0.09     0.429 / 0.446    0.65    
+   5.25   0.12 / 0.10     0.435 / 0.447    0.66    
+   5.50   0.13 / 0.11     0.442 / 0.446    0.65    
+   5.75   0.13 / 0.13     0.450 / 0.446    0.65    
+   6.00   0.14 / 0.15     0.458 / 0.444    0.62    
+   6.25   0.14 / 0.16     0.470 / 0.448    0.59    
+   6.50   0.14 / 0.17     0.467 / 0.448    0.59    
+   6.75   0.14 / 0.18     0.467 / 0.447    0.56    
+   7.00   0.22 / 0.23     0.478 / 0.456    0.55    
+   7.25   0.28 / 0.30     0.489 / 0.470    0.60    
+   7.50   0.29 / 0.32     0.495 / 0.464    0.67    
+   7.75   0.29 / 0.32     0.497 / 0.464    0.68    
+   8.00   0.29 / 0.32     0.497 / 0.464    0.68    
+   8.25   0.29 / 0.32     0.497 / 0.463    0.68    
+   8.50   0.29 / 0.32     0.497 / 0.464    0.68    
+   8.75   0.29 / 0.32     0.497 / 0.463    0.68    
+   9.00   0.29 / 0.32     0.496 / 0.464    0.68    
+   9.25   0.29 / 0.32     0.497 / 0.463    0.68    
+   9.50   0.28 / 0.32     0.497 / 0.464    0.67    
+   9.75   0.28 / 0.32     0.497 / 0.464    0.66    
+  10.00   0.28 / 0.32     0.497 / 0.467    0.66    
+  10.25   0.26 / 0.29     0.494 / 0.456    0.66    
+  10.50   0.26 / 0.29     0.493 / 0.454    0.66    
+  10.75   0.26 / 0.29     0.493 / 0.454    0.65    
+  11.00   0.26 / 0.29     0.493 / 0.454    0.65    
+  11.25   0.27 / 0.29     0.493 / 0.454    0.66    
+  11.50   0.27 / 0.29     0.492 / 0.456    0.66    
+  11.75   0.27 / 0.29     0.492 / 0.456    0.66    
+  12.00   0.26 / 0.29     0.492 / 0.455    0.66    
+  12.25   0.26 / 0.29     0.492 / 0.455    0.66    
+  12.50   0.26 / 0.29     0.491 / 0.455    0.65    
+  12.75   0.27 / 0.29     0.491 / 0.458    0.65    
+  13.00   0.26 / 0.29     0.490 / 0.457    0.66    
+  13.25   0.28 / 0.32     0.496 / 0.465    0.67    
+  13.50   0.30 / 0.34     0.494 / 0.465    0.66    
+  13.75   0.30 / 0.34     0.495 / 0.467    0.65    
+  14.00   0.30 / 0.34     0.494 / 0.466    0.66    
+  water fraction: 0 samples over 0.08 (worst 0.04 at 13.25 s)
+  mean luma:      0 samples over 0.08 (worst 0.055 at 0.00 s)
+  layout agreement mean 0.64, min 0.55 at 7.00 s
+
+[review] verify/review/sheet.png  rows = t 1, 2, 3.5, 3.75, 5, 6, 7, 7.5, 10, 12 s; left reference, right own
+[review] verify/review/side_by_side.mp4  left reference, right own
+
+HARD: PASS
+INDICATORS: 0 over the line; each needs a fix or a reason in the visual review
+FINAL VERDICT: visual review (see TASK.md)
